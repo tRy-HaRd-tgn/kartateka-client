@@ -1,18 +1,121 @@
-# we are using:<br/> 
-Vite<br/> 
-react-insta-stories<br/> 
-react-select<br/> 
-react-slick<br/> 
-react-router-dom<br/> 
-redux <br /> 
-axios <br />
-react-spring-bottom-sheet <br />
-for install vite: npm i vite <br /> 
-for start project - npm start <br /> 
-for install react-select: npm i --save react-select <br /> 
-for install react-slick: npm i --save react-slick <br /> 
-for install react-insta-stories: npm install --save react-insta-stories <br /> 
-for install react-router-dom: npm i --save react-router-dom <br/> 
-for install redux: npm i redux react-redux <br/> 
-for install axios: npm i axios @types/axios <br/> 
-for install react-spring-bottom-sheet: npm i react-spring-bottom-sheet
+# Kartateka Client
+
+Клиентское приложение для системы авторизации Kartateka, построенное на React с использованием архитектуры Feature-Sliced Design.
+
+## Описание
+
+Kartateka Client - это веб-приложение, реализующее систему авторизации с использованием передовой технологии "concept id". Приложение поддерживает многоэтапную регистрацию пользователей и адаптивный дизайн для различных устройств.
+
+## Технологический стек
+
+- **React 18.3.1** - библиотека для построения пользовательского интерфейса
+- **Redux Toolkit 2.2.7** - управление состоянием приложения
+- **React Redux 9.1.2** - интеграция Redux с React
+- **SASS 1.77.8** - препроцессор CSS для стилизации
+- **React Scripts 5.0.1** - инструменты сборки и разработки
+
+## Структура проекта
+
+Проект организован по методологии Feature-Sliced Design:
+
+```
+src/
+├── app/              # Инициализация приложения, провайдеры, роутинг
+│   ├── screen-container/  # Контейнер экрана с адаптивностью
+│   └── store/        # Конфигурация Redux store
+├── pages/            # Страницы приложения
+│   ├── auth-1/       # Первая страница авторизации
+│   └── auth-2/       # Вторая страница авторизации (регистрация)
+├── widgets/          # Композитные блоки интерфейса
+├── features/         # Функциональные возможности
+├── entities/         # Бизнес-сущности
+└── shared/           # Переиспользуемые ресурсы
+    ├── ui/           # UI компоненты (Input, DirectionButton, PageProgressBar)
+    ├── assets/       # Статические ресурсы (иконки, изображения)
+    ├── fonts/        # Шрифты (JetBrains Mono, Mulish, Sulphur Point, Ubuntu)
+    └── lib/          # Утилиты (isMobile)
+```
+
+## Установка и запуск
+
+### Требования
+
+- Node.js (версия 14 или выше)
+- npm или yarn
+
+### Установка зависимостей
+
+```bash
+npm install
+```
+
+### Запуск в режиме разработки
+
+```bash
+npm start
+```
+
+Приложение будет доступно по адресу [http://localhost:3000](http://localhost:3000)
+
+### Сборка для production
+
+```bash
+npm run build
+```
+
+Собранные файлы будут находиться в папке `build/`
+
+### Запуск тестов
+
+```bash
+npm test
+```
+
+## Основные компоненты
+
+### Страницы
+
+- **Auth1** - Первая страница авторизации с информацией о защите данных
+- **Auth2** - Страница регистрации с формой ввода данных (почта, пароль, имя, город)
+
+### UI компоненты
+
+- **ScreenContainer** - Адаптивный контейнер, определяющий тип устройства (мобильное/десктоп)
+- **Input** - Компонент поля ввода с иконкой
+- **DirectionButton** - Кнопка навигации (Назад/Продолжить)
+- **PageProgressBar** - Индикатор прогресса страницы
+
+## Особенности
+
+- Адаптивный дизайн с автоматическим определением типа устройства
+- Многоэтапная форма регистрации
+- Модульная архитектура для легкого масштабирования
+- Поддержка нескольких шрифтовых семейств
+- Использование SCSS модулей для изоляции стилей
+
+## Браузерная поддержка
+
+Приложение поддерживает все современные браузеры:
+- Chrome (последняя версия)
+- Firefox (последняя версия)
+- Safari (последняя версия)
+- Edge (последняя версия)
+
+## Разработка
+
+### Форматирование кода
+
+В проекте используется Prettier для форматирования кода. Настройки находятся в конфигурации проекта.
+
+### Линтинг
+
+Проект использует ESLint с конфигурацией `react-app` и `react-app/jest`.
+
+## Лицензия
+
+Проект является приватным.
+
+## Автор
+
+Kartateka Team
+
